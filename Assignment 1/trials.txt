@@ -1,0 +1,6 @@
+Brute-force (no changes) : 0.37
+Lemmas as feature: 0.37
+Tokens as feature: 0.37
+Count_Vectorizer Text as feature: 0.375
+TF-IDF Text as feature = 0.38
+ 
