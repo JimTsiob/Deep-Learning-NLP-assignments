@@ -3,4 +3,4 @@ Lemmas as feature: 0.37
 Tokens as feature: 0.37
 Count_Vectorizer Text as feature: 0.375
 TF-IDF Text as feature = 0.38
- 
+Optuna hyperparameter tuning LR with cleaning: 0.39 (highest possible)
