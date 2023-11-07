@@ -1,2 +1,3 @@
 https://www.milindsoorya.com/blog/introduction-to-word-frequencies-in-nlp#data-processing (word_frequency nltk)
 https://www.tutorialspoint.com/python_text_processing/python_tokenization.htm#:~:text=In%20Python%20tokenization%20basically%20refers,for%20a%20non%2DEnglish%20language. (tokenization)
+https://www.kaggle.com/code/yus002/logistic-regression-optuna-tuning (Optuna hyper-parameter tuning for Logistic Regression)
