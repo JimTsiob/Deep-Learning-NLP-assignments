@@ -1,0 +1,2 @@
+https://rohit-agrawal.medium.com/using-fine-tuned-gensim-word2vec-embeddings-with-torchtext-and-pytorch-17eea2883cd
+https://spotintelligence.com/2023/02/15/word2vec-for-text-classification/#1_Install_the_required_packages
