@@ -1,0 +1,3 @@
+BCELoss = 33%
+BCELossWithLogits = 34%
+MSELoss = 33%
