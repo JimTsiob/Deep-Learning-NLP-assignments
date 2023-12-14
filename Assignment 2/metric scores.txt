@@ -4,6 +4,10 @@ BCELoss - brute force (SGD) = 33%
 BCELossWithLogits - brute force (SGD) = 34%
 MSELoss - brute force (SGD) = 33%
 
+CrossEntropyLoss - brute force (SGD) = 33%
+CrossEntropyLoss - brute force (Adam) = 33.4%
+CrossEntropyLoss - brute force (AdamW) = 33%
+
 MSELoss with Softmax/ReLU/Dropout - SGD = 33.3%
 MSELoss with Softmax/ReLU/Dropout - Adam = 34% (33.9%)
 MSELoss with Softmax/ReLU/Dropout - AdamW = 33.2%
@@ -13,3 +17,5 @@ BCELoss with Sigmoid/ReLU/Dropout - Adam = 32.5%
 
 BCELossWithLogits - best hyperparams = 33.6% (34%)
 MSELoss - Adam = 33.1%
+
+CrossEntropyLoss with Softmax/ReLU/Dropout - Adam = 35% (best score yet, sometimes)
