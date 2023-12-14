@@ -1,0 +1,19 @@
+ReLU / Dropout NN - CrossEntropyLoss - SGD = 32%
+ReLU / Dropout NN - CrossEntropyLoss - Adam = 39%
+ReLU / Dropout NN - CrossEntropyLoss - AdamW = 38%
+
+ReLU / Dropout NN - BCEWithLogitsLoss - SGD = 37.3%
+ReLU / Dropout NN - BCEWithLogitsLoss - Adam = 38.3%
+ReLU / Dropout NN - BCEWithLogitsLoss - AdamW = 38.2%
+
+Sigmoid NN - BCELoss - SGD = 37.6%
+Sigmoid NN - BCELoss - Adam = 38.8%
+Sigmoid NN - BCELoss - AdamW = 38.7%
+
+Softmax NN - MSELoss - SGD = 33.8%
+Softmax NN - MSELoss - Adam = 40%
+Softmax NN - MSELoss - AdamW = 39.4%
+
+Brute force NN - CrossEntropyLoss - SGD = 36.6%
+Brute force NN - CrossEntropyLoss - AdamW = 37.2%
+Brute force NN - CrossEntropyLoss - Adam = 37.8%

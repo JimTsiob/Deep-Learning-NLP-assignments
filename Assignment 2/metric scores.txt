@@ -1,15 +1,17 @@
 All experiments were done with 100 epochs.
 
-BCELoss - brute force (SGD) = 33%
-BCELossWithLogits - brute force (SGD) = 34%
+BCELoss (cannot be done with Brute force, needs Sigmoid)
+BCELossWithLogits - brute force (SGD) = 32.9%
 MSELoss - brute force (SGD) = 33%
 
 MSELoss with Softmax/ReLU/Dropout - SGD = 33.3%
-MSELoss with Softmax/ReLU/Dropout - Adam = 34% (33.9%)
-MSELoss with Softmax/ReLU/Dropout - AdamW = 33.2%
+MSELoss with Softmax/ReLU/Dropout - Adam = 34% (33.6%)
+MSELoss with Softmax/ReLU/Dropout - AdamW = 33.4%
 
-BCELoss with Sigmoid/ReLU/Dropout - AdamW = 33.6% (34%)
-BCELoss with Sigmoid/ReLU/Dropout - Adam = 32.5%
+BCELoss with Sigmoid/ReLU/Dropout - SGD = 32.7%
+BCELoss with Sigmoid/ReLU/Dropout - Adam = 34%
+BCELoss with Sigmoid/ReLU/Dropout - AdamW = 33.9% (34%)
 
-BCELossWithLogits - best hyperparams = 33.6% (34%)
-MSELoss - Adam = 33.1%
+BCELossWithLogits with ReLU/Dropout - SGD = 33.7%
+BCELossWithLogits with ReLU/Dropout - Adam = 32.8%
+BCELossWithLogits with ReLU/Dropout - AdamW = 34%
