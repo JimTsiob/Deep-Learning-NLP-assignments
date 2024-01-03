@@ -1,0 +1,1 @@
+LSTM (10 hidden neurons) = 33.3%
