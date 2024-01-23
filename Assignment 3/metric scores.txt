@@ -1,1 +1,4 @@
 LSTM (10 hidden neurons) = 33.3%
+LSTM (2 hidden, bidirectional, stacked) = 39.5% (can reach 40%)
+RNN (bidirectional, stacked, 2 hidden) = 39%
+GRU (bidirectional, stacked, 2 hidden) = 38.5%
