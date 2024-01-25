@@ -1,8 +1,8 @@
-ReLU / Dropout NN - CrossEntropyLoss - SGD = 32%
+ReLU / Dropout NN - CrossEntropyLoss - SGD = 37.1%
 ReLU / Dropout NN - CrossEntropyLoss - Adam = 39%
 ReLU / Dropout NN - CrossEntropyLoss - AdamW = 38%
 
-ReLU / Dropout NN - BCEWithLogitsLoss - SGD = 37.3%
+ReLU / Dropout NN - BCEWithLogitsLoss - SGD = 32.3%
 ReLU / Dropout NN - BCEWithLogitsLoss - Adam = 38.3%
 ReLU / Dropout NN - BCEWithLogitsLoss - AdamW = 38.2%
 

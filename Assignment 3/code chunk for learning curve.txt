@@ -1,0 +1,100 @@
+# Learning curve for best neural network
+train_f1_scores = []
+val_f1_scores = []
+
+input_size = 100 
+hidden_size = 50  
+output_size = 3 
+learning_rate = 0.001
+num_hidden_layers = 2
+num_heads = 4
+clip_size = 1.0
+
+if max_result_nn == 'lstm':
+    cell_type = 'LSTM'
+    model = RNN(cell_type,input_size, hidden_size, output_size, num_hidden_layers)
+    print('LSTM model created.')
+elif max_result_nn == 'rnn':
+    cell_type = 'RNN'
+    model = RNN(cell_type,input_size, hidden_size, output_size, num_hidden_layers)
+    print('RNN model created.')
+elif max_result_nn == 'gru':
+    cell_type = 'GRU'
+    model = RNN(cell_type,input_size, hidden_size, output_size, num_hidden_layers)
+    print('GRU model created.')
+elif max_result_nn == 'skip':
+    cell_type = 'LSTM'
+    model = RNN_skip(cell_type,input_size, hidden_size, output_size, num_hidden_layers)
+    print('LSTM Skip connections model created.')
+elif max_result_nn == 'grad_clip':
+    cell_type = 'LSTM'
+    model = RNN_grad_clip(cell_type,input_size, hidden_size, output_size, num_hidden_layers, clip_value)
+    print('LSTM Gradient clipping model created.')
+elif max_result_nn == 'attention':
+    cell_type = 'LSTM'
+    model = RNN_Attention(cell_type,input_size, hidden_size, output_size, num_hidden_layers, num_heads)
+    print('LSTM Attention model created.')
+
+print("\n")
+    
+for epoch in range(16):
+    batch_losses = []
+    for x_batch, y_batch in train_dataloader:
+        y_pred = model(x_batch)
+
+        loss = loss_func(y_pred, y_batch)
+        batch_losses.append(loss.item())
+        # print('y_pred=', y_pred[0])
+        #Delete previously stored gradients
+        optimizer.zero_grad()
+        #Perform backpropagation starting from the loss calculated in this epoch
+        
+        loss.backward()
+        #Update model's weights based on the gradients calculated during backprop
+        optimizer.step()
+    
+#     print(f"Epoch {epoch:3}: Loss = {sum(batch_losses)/len(train_dataloader):.5f}")
+
+    # Evaluation on training set
+    model.eval()
+    train_predictions = []
+    train_targets = []
+    with torch.no_grad():
+        for inputs, labels in train_dataloader:
+            outputs = model(inputs)
+            _, predicted = torch.max(outputs, 1)
+            
+            # Append predictions and targets for f1_score calculation
+            train_predictions.extend(predicted.cpu().numpy())
+            train_targets.extend(labels.cpu().numpy())
+            
+    train_targets_indices = [np.argmax(label) if np.sum(label) > 0 else -1 for label in train_targets]
+    train_f1 = f1_score(train_targets_indices, train_predictions, average='macro')
+    train_f1_scores.append(train_f1)
+    
+    # Evaluation on valid set
+    model.eval()
+    val_predictions = []
+    val_targets = []
+    with torch.no_grad():
+        for inputs, labels in valid_dataloader:
+            outputs = model(inputs)
+            _, predicted = torch.max(outputs, 1)
+            
+            # Append predictions and targets for f1_score calculation
+            val_predictions.extend(predicted.cpu().numpy())
+            val_targets.extend(labels.cpu().numpy())
+            
+    val_targets_indices = [np.argmax(label) if np.sum(label) > 0 else -1 for label in val_targets]
+    val_f1 = f1_score(val_targets_indices, val_predictions, average='macro')
+    val_f1_scores.append(val_f1)
+    
+
+# Plot the learning curve
+plt.plot(train_f1_scores, label='Train F1 Score')
+plt.plot(val_f1_scores, label='Validation F1 Score')
+plt.xlabel('Epoch')
+plt.ylabel('F1 Score')
+plt.title('Learning Curve')
+plt.legend()
+plt.show()
