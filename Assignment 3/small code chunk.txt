@@ -1,0 +1,18 @@
+# Initialize dictionary with categories and their accuracy scores
+accuracy_scores = {
+   'category1': 0.85,
+   'category2': 0.90,
+   'category3': 0.88,
+   'category4': 0.92,
+   'category5': 0.91,
+   'category6': 0.89,
+   'category7': 0.87
+}
+
+# Find the category with the maximum accuracy score
+max_category = max(accuracy_scores, key=accuracy_scores.get)
+
+# Perform an action if the maximum score is associated with a specific category
+if max_category == 'category4':
+   # Perform an action
+   print('The maximum accuracy score is from category4')
