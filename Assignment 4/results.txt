@@ -4,7 +4,7 @@
 16 batch size f1-score (Greek-BERT) = 40.7%
 16 batch size f1-score (DistilGREEK-BERT) = 39.7%
 
-32 batch size f1-score (Greek-BERT) = 42%
+32 batch size f1-score (Greek-BERT) = 42.2%
 32 batch size f1-score (DistilGREEK-BERT) = 41.4%
 
 ------------- 5 epochs -------------
