@@ -1,12 +1,18 @@
-8 batch size f1-score 3 epochs (Greek-BERT) = 40.6%
+8 batch size f1-score 3 epochs, learning rate 2e-5 (Greek-BERT) = 40.6%
 
-------------- 3 epochs -------------
-16 batch size f1-score (Greek-BERT) = 40.7%
-16 batch size f1-score (DistilGREEK-BERT) = 39.7%
+------------- 3 epochs (BEST) -------------
+16 batch size f1-score, learning rate 2e-5 (Greek-BERT) = 40.7%
+16 batch size f1-score, learning rate 2e-5 (DistilGREEK-BERT) = 39.7%
 
-32 batch size f1-score (Greek-BERT) = 42.2%
-32 batch size f1-score (DistilGREEK-BERT) = 41.4%
+32 batch size f1-score, learning rate 2e-5 (Greek-BERT) = 42.2%
+32 batch size f1-score, learning rate 2e-5 (DistilGREEK-BERT) = 41.4%
+
+32 batch size , learning rate 3e-5 (Greek-BERT) = 41.4%
+32 batch size, learning rate 3e-5 (DistilGREEK-BERT) = 41.3%
+
+32 batch size , learning rate 5e-5 (Greek-BERT) = 38.8%
+32 batch size, learning rate 5e-5 (DistilGREEK-BERT) = 41.5%
 
 ------------- 5 epochs -------------
-32 batch size f1-score (Greek-BERT) = 39.4%
-32 batch size f1-score (DistilGREEK-BERT) = 41.5%
+32 batch size f1-score, learning rate 2e-5 (Greek-BERT) = 39.4%
+32 batch size f1-score, learning rate 2e-5 (DistilGREEK-BERT) = 41.5%
